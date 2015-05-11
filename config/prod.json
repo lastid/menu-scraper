@@ -1,0 +1,8 @@
+{
+    "public": {
+        "GOOGLE_KEY": ""
+    },
+
+    "_c": "Google geocoder key",
+    "GOOGLE_KEY": "-----"
+}

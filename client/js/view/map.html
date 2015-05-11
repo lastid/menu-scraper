@@ -1,0 +1,16 @@
+<template name="map">
+    <div id="map">
+    </div>
+    <div class="restaurant-list">
+        {{#each getRestaurants}}
+            {{> restaurantSummary}}
+        {{/each}}
+    </div>
+</template>
+
+<template name="restaurantSummary">
+    <div class="restaurant-summary">
+        <div><span class="order">{{order}}</span>{{detail.name}}</div>
+        <div class="address">{{detail.geo.address}}</div>
+    </div>
+</template>

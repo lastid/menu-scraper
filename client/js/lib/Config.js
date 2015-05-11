@@ -1,0 +1,1 @@
+//N.Config = Meteor.settings.public;

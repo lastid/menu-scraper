@@ -1,0 +1,82 @@
+@import "bootstrap.lessimport";
+
+#map{
+    //min-height: 400px;
+    float: left;
+}
+
+.navbar{
+    margin-bottom: 0;
+}
+
+#loading{
+    width: 100%;
+    position: fixed;
+    z-index: 1000000;
+    top: 50px;
+    text-align: center;
+    height: 0;//Make layers under this clickable
+
+    div {
+        display: inline-block;
+        background-color: #fe8;
+        padding: 10px;
+        .box-shadow(~"0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset");
+    }
+}
+
+.restaurant-list{
+    box-sizing: border-box;
+    overflow-y: auto;
+    //background-color: #f3f3f3;
+    float: left;
+    width: 250px;
+
+    .restaurant-summary{
+        cursor: pointer;
+        padding: 10px;
+        border-bottom: 1px solid #f3f3f3;
+
+        &:hover{
+            background-color: #f5f5f5;
+        }
+    }
+
+    .order {
+        padding: 4px;
+        background-color: #70DBDB;
+        margin-right: 4px;
+    }
+
+    .address{
+        font-size: smaller;
+        color: #ccc;
+        margin-top: 5px;
+    }
+}
+
+
+.restaurant-detail-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    overflow-y: auto;
+
+    .close{
+        position:absolute;
+        right: 10px;
+        font-size: xx-large;
+        color: red;
+        opacity: 0.7;
+    }
+    img{
+        width: 100%;
+    }
+}
+
+.restaurant-detail{
+    padding: 20px;
+}

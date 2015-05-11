@@ -1,0 +1,39 @@
+<template name="restaurantDetail">
+    <span class="close">&times;</span>
+    <img src="{{proxiedPhoto}}"/>
+    <div class="restaurant-detail">
+        <h3>{{name}}</h3>
+        <div class="address">{{geo.address}}</div>
+        <div class="email">{{email}}</div>
+        {{#if website}}
+            <div class="website"><a href="{{website}}">{{website}}</a></div>
+        {{/if}}
+        <br/>
+        <div class="menu">
+            {{#with menu}}
+                <div>ENTREE</div>
+                {{#each starter}}
+                <div>
+                    {{name}} {{#if price}} - {{price}}{{/if}}
+                </div>
+                {{/each}}
+                <br/>
+
+                <div>PLAT</div>
+                {{#each main}}
+                <div>
+                    {{name}} {{#if price}} - {{price}}{{/if}}
+                </div>
+                {{/each}}
+                <br/>
+
+                <div>DESSERT</div>
+                {{#each dessert}}
+                <div>
+                    {{name}} {{#if price}} - {{price}}{{/if}}
+                </div>
+                {{/each}}
+            {{/with}}
+        </div>
+    </div>
+</template>
