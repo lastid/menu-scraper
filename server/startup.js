@@ -1,3 +1,3 @@
 Meteor.startup(function () {
-    //N.bll.extractor.BestRestaurantsParis.extract();
+    N.bll.Extractor.extract();
 });

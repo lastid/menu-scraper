@@ -177,7 +177,8 @@ N.bll.extractor.BestRestaurantsParis = new function () {
             }
         }
 
-        root.restaurantUrls = root.restaurantUrls.slice(1);
+        // slice here to not crawl all urls at once
+        root.restaurantUrls = root.restaurantUrls.slice(0, 1);
         extractUrl(root.restaurantUrls);
 
         if (content) {
